@@ -1,29 +1,31 @@
 package dockerw
 
 import (
-    "strings"
+	"strings"
 )
 
 type From struct {
-    value string
+	value string
 }
 
 func (f *From) verify() error {
-    return nil
+	return nil
 }
 
 func (f *From) toString() string {
-    return f.value
+	return f.value
 }
 
-// FromString directly assigns the string to the From statement of the 
+// FromString directly assigns the string to the From statement of the
 // Dockerfile prepends 'FROM' if needed.
-func (w *Writer) From(src string) {
-    src = strings.TrimSpace(src)
+func (w *Writer) From(src string) *Writer {
+	src = strings.TrimSpace(src)
 
-    if !strings.HasPrefix(src, "FROM") {
-        src = "FROM " + src
-    }
+	if !strings.HasPrefix(src, "FROM") {
+		src = "FROM " + src
+	}
 
-    w.addCommand(&From{src})
+	w.addCommand(&From{src})
+
+	return w
 }
