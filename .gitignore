@@ -1,0 +1,27 @@
+# go/dep files
+vendor
+
+# Go binary
+knowledge-base
+
+# Mac files
+.DS_STORE
+
+# Vim
+*.swp
+
+# Certificate files
+*.key
+*.crt
+*.csr
+
+# go-service files
+.go.service.rename
+
+# Database files
+*.db
+
+test_logs.txt
+
+# Session Data
+.session
