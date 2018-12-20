@@ -12,6 +12,10 @@ func (w *WorkDir) verify() error {
 	return nil
 }
 
+func (w *WorkDir) toBytes() []byte {
+	return []byte(w.value)
+}
+
 func (w *WorkDir) toString() string {
 	return w.value
 }

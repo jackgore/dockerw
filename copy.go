@@ -13,6 +13,10 @@ func (c *Copy) verify() error {
 	return nil
 }
 
+func (c *Copy) toBytes() []byte {
+	return []byte(c.value)
+}
+
 func (c *Copy) toString() string {
 	return c.value
 }

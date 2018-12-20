@@ -1,8 +1,15 @@
 package dockerw
 
+import (
+    "io"
+)
+
 // Writer contains specifiers for writing a Dockerfile
 type Writer struct {
-	// Commands contains an order list of commands
+    // Specifies where the Dockerfile will be written to
+    Writer io.Writer
+
+	// Commands contains an ordered list of commands
 	Commands []Command
 }
 

@@ -12,6 +12,10 @@ func (f *From) verify() error {
 	return nil
 }
 
+func (f *From) toBytes() []byte {
+	return []byte(f.value)
+}
+
 func (f *From) toString() string {
 	return f.value
 }

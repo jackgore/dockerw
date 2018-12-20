@@ -4,4 +4,5 @@ package dockerw
 type Command interface {
 	verify() error
 	toString() string
+	toBytes() []byte
 }
