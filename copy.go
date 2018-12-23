@@ -28,7 +28,7 @@ func (w *Writer) Copy(d1, d2 string) *Writer {
 
 	d := fmt.Sprintf("COPY %v %v", d1, d2)
 
-	w.addCommand(&From{d})
+	w.addCommand(&Copy{d})
 
 	return w
 }
