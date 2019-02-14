@@ -29,7 +29,7 @@ func (w *Writer) Cmd(cmds []string) *Writer {
 	for i, cmd := range cmds {
 		s.WriteString(fmt.Sprintf("\"%v\"", cmd))
 		if i < len(cmds)-1 {
-			s.WriteString(",")
+			s.WriteString(", ")
 		}
 	}
 
