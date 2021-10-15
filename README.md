@@ -1,3 +1,8 @@
+# Dockerw
+
+Dockerw is a set of utilities for programmtically writing a Dockerfile.
+
+```
 package main
 
 import (
@@ -16,3 +21,4 @@ func main() {
 		Copy(".", "/go/github.com/jackgore/dockerw")
 	writer.Write()
 }
+```
